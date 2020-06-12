@@ -1,0 +1,34 @@
+// function Student(name, id, lang) {
+//     this.name = name;
+//     this.id = id;
+
+//     this.display = function(){
+//         document.write(name);
+//         document.write("<br>");
+//         document.write(id);
+//         document.write("<br>");
+//         document.write(lang);
+//     }
+//     this.lang = lang;
+// }
+
+// var s1 = new Student("Joy", "1212", ["bn", "en"]);
+// s1.display();
+
+class Student {
+    constructor(name, id, lang) {
+        this.name = name;
+        this.id = id;
+        this.lang = lang;
+        this.display = function () {
+            document.write(name);
+            document.write("<br>");
+            document.write(id);
+            document.write("<br>");
+            document.write(lang);
+        }
+    }
+}
+
+var s1 = new Student("Rabbi", "1", ["bn", "en"]);
+s1.display();
