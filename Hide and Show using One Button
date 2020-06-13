@@ -10,7 +10,17 @@
             transition: 2s;
         }
         
-        
+    //for image (css) 
+     .hide {
+            width: 0;
+            height: 0;
+            transition: 2s;
+
+            
+        }
+        .Show{
+            transition: 2s;
+        }
         
 //html 
 
