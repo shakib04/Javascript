@@ -1,0 +1,39 @@
+//style file
+img {
+            height: 400px;
+            position: absolute;
+        }
+        #btnPrev{
+            margin-right: 10px;
+        }
+
+
+//html file
+<button id="btnNext" onclick="ImagesNext()">Next</button>
+    <button id="btnPrev" onclick="ImagesPrev()">Prev</button>
+    <img src="img/1.jpg" alt="">
+
+
+
+
+var img = ["img/1.jpg", "img/2.jpg", "img/3.jpg"];
+var index = 0;
+function ImagesNext() {
+    if (index < img.length) {
+        index++;
+        if (index == img.length) {
+            index = 0;
+        }
+        document.querySelector("img").src = img[index];
+    }
+}
+
+function ImagesPrev() {
+    if (index >= 0) {
+        index--;
+        if (index == -1) {
+            index = img.length - 1;
+        }
+        document.querySelector("img").src = img[index];
+    }
+}
