@@ -1,0 +1,37 @@
+//css
+ .hide {
+            font-size: 0;
+            transition: 2s;
+
+            
+        }
+        .Show{
+            font-size: 24px;
+            transition: 2s;
+        }
+        
+        
+        
+//html 
+
+
+<button id="btnAddStyle">Add Style</button>
+    <button id="btnRemoveStyle">Remove</button>
+    <h2>Hello There!!</h2>
+    
+
+//js
+var count = 0;
+document.querySelector("#btnAddStyle").addEventListener("click", function () {
+
+    if (count == 0) {
+        document.querySelector("h2").classList.remove("Show");
+        document.querySelector("h2").classList.add("hide");
+        count = 1;
+    }
+    else {
+        document.querySelector("h2").classList.remove("hide");
+        document.querySelector("h2").classList.add("Show");
+        count = 0;
+    }
+});
