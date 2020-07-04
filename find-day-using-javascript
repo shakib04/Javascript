@@ -1,0 +1,52 @@
+<body>
+    <form action="" method="get" name="myform">
+        <input type="range" name="range" id="" max="90000" oninput="myf()" class="range-Custom">
+        <h2></h2>
+        <br>
+        <input type="date" name="date" id="" oninput="Day()">
+        <h1></h1>
+    </form>
+    <script>
+    
+        document.querySelector("h2").innerHTML = "value: " + document.forms["myform"]["range"].value;
+        function myf() {
+            var rangeVal = document.forms["myform"]["range"].value;
+            document.querySelector("h2").innerHTML = "value: " + rangeVal;
+        }
+        
+        
+        function Day() {
+            var date = document.forms["myform"]["date"].value;
+            var d = new Date(date);
+            var daynum = d.getDay();
+            //alert(d);
+
+            switch (daynum) {
+                case 1:
+                    document.querySelector("h1").innerHTML = "Monday";
+                    break;
+                case 2:
+                    document.querySelector("h1").innerHTML = "Tuesday";
+                    break;
+                case 3:
+                    document.querySelector("h1").innerHTML = "Wednesday";
+                    break;
+                case 4:
+                    document.querySelector("h1").innerHTML = "Thrusday";
+                    break;
+                case 5:
+                    document.querySelector("h1").innerHTML = "Friday";
+                    break;
+                case 6:
+                    document.querySelector("h1").innerHTML = "Saturday";
+                    break;
+                case 7:
+                    document.querySelector("h1").innerHTML = "Sunday";
+                    break;
+
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
