@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .hd {
+            color: aliceblue;
+            background-color: navy;
+        }
+
+        .hide {
+            display: none;
+            transition: 20s;
+        }
+
+        .design{
+            background-color: blueviolet;
+            color: white;
+            font-size: 17px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <button>Check</button>
+
+    <div class="html-ex">
+        &lt;!DOCTYPE html&gt; <br>
+        &lt;html&gt; <br>
+        &lt;title&gt;HTML Tutorial&lt;/title&gt; <br>
+        &lt;body&gt; <br>
+
+        &lt;h1&gt;This is a heading&lt;/h1&gt; <br>
+        &lt;p&gt;This is a paragraph.&lt;/p&gt; <br>
+
+        &lt;/body&gt; <br>
+        &lt;/html&gt;
+    </div>
+
+    <p></p>
+    <script src="jquery.js"></script>
+    <script>
+        var btnText = $(".html-ex").text();
+
+        //$("p").text(btnText);
+
+        var newText = "";
+
+        for (let index = 0; index < btnText.length; index++) {
+
+            if (btnText[index] == "<") {
+                newText = newText + "<br>" + btnText[index] + "<span class='design'>";
+
+            } else if (btnText[index] == ">") {
+                newText = newText + "</span>" + btnText[index] + "<br>";
+
+            } else {
+                newText = newText + btnText[index];
+            }
+        }
+
+        $("p").html(newText);
+
+    </script>
+    <script src="test.js"></script>
+</body>
+
+</html>
